@@ -1,7 +1,7 @@
 name: "PicList Server"
-version: "1.0.0"
-slug: "piclist"
-description: "PicList 核心服务端，支持多种图床上传"
+version: "1.0.1"  # 建议把版本号加 1，强制 HA 识别更新
+slug: "piclist_server"
+description: "基于 PicList 核心的图床上传与多云存储管理服务端"
 url: "https://github.com/Kuingsmile/PicList"
 arch:
   - aarch64
@@ -11,6 +11,6 @@ ports:
   36677/tcp: 36677
 map:
   - config:rw
-startup: "services"
 options: {}
 schema: {}
+startup: "application"  # <--- ⚠️ 关键修改：改为 application
