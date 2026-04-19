@@ -1,0 +1,16 @@
+name: "PicList Server"
+version: "1.0.0"
+slug: "piclist"
+description: "PicList 核心服务端，支持多种图床上传"
+url: "https://github.com/Kuingsmile/PicList"
+arch:
+  - aarch64
+  - amd64
+  - armv7
+ports:
+  36677/tcp: 36677
+map:
+  - config:rw
+startup: "services"
+options: {}
+schema: {}
