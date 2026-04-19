@@ -1,16 +1,12 @@
-#!/usr/bin/with-contenv bashio
+#!/bin/bash
+set -e
 
-bashio::log.info "========================================="
-bashio::log.info "   🚀 初始化 PicList 服务端插件...       "
-bashio::log.info "========================================="
+echo "========================================="
+echo "   🚀 初始化 PicList 服务端插件 (纯净版)... "
+echo "========================================="
 
-# 强制将 HOME 环境变量指向 /config，确保配置持久化
 export HOME=/config
-
-# 确保配置存放的文件夹存在
 mkdir -p /config/.piclist
 
-bashio::log.info "启动 PicList 服务器进程，监听 36677 端口..."
-
-# 启动 PicList 服务
+echo "启动 PicList 服务器进程，监听 36677 端口..."
 piclist server
