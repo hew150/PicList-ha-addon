@@ -9,5 +9,6 @@ export HOME=/config
 mkdir -p /config/.piclist
 
 echo "启动 PicList 服务器进程，监听 36677 端口..."
-# ⚠️ 关键修正：使用 PicList-Core 预留的 picgo-server 命令
+
+# ⚠️ 必须是下面这行，不能是 piclist server
 picgo-server
